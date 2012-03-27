@@ -1,0 +1,51 @@
+#wrapper{
+	height: 1000px;	
+}
+
+#header{
+	height: 200px;
+	text-align: center;
+	padding: 5px;
+}
+
+#emblem{
+}
+
+#banner{
+	text-align: center;
+	height: 180px;
+	background: url(../images/banner.jpg);
+}
+
+#form{
+	text-align: center;
+	margin-top: 30px;	
+	margin-left: 30px;
+	padding: 10px;
+	
+	font: 20px Arial, Helvetica, sans-serif;
+	color: #DE4816;
+	
+	background: #CC3;
+	border-radius: 10px;
+	box-shadow: #F90 2px 2px 10px;
+}
+
+#info{
+	height: 200px;
+	margin-top: 30px;
+	padding: 10px;
+	background: #030;
+	color: #FFF;
+	font: 22px  bold "Lucida Console", Monaco, monospace;
+	border-radius: 10px;	
+	box-shadow: #090 -2px 2px 10px;
+}
+#footer{
+	border-top: 2px solid #000;
+	margin-top: 30px;
+	text-align: center;
+	font: 15px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #000;	
+	padding: 10px;
+}

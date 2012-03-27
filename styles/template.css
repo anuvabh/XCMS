@@ -1,0 +1,20 @@
+#wrapper{
+	height: 1000px;
+	border: 2px solid black;
+}
+
+#topbar{
+	color: #FFF;
+	padding: 5px;
+	height:60px;
+	background: url(../images/pageHeader.jpg);
+	position: fixed;
+	z-index: 300;	
+}
+
+#welcome{
+	height: 100px;
+	background: #666;	
+	margin-top: 30px;
+	padding: 10px;
+}

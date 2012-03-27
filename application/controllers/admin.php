@@ -3,4 +3,10 @@
 class Admin extends CI_Controller {
 
 	public function createDepartment(){}
+	public function deleteDepartment(){}
+	public function editDepartment(){}
+	public function viewRegistry(){}
+	public function editRegistry(){}
+	public function viewActionLog(){}
+	public function viewErrorLog(){}
 }

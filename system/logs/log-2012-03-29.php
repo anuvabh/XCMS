@@ -166,3 +166,71 @@ DEBUG - 2012-03-29 18:17:25 --> Controller Class Initialized
 DEBUG - 2012-03-29 18:17:25 --> File loaded: system/views/index_view.php
 DEBUG - 2012-03-29 18:17:25 --> Final output sent to browser
 DEBUG - 2012-03-29 18:17:25 --> Total execution time: 0.0342
+DEBUG - 2012-03-29 20:33:25 --> Config Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Hooks Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Utf8 Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> UTF-8 Support Enabled
+DEBUG - 2012-03-29 20:33:25 --> URI Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Router Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> No URI present. Default controller set.
+DEBUG - 2012-03-29 20:33:25 --> Output Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Security Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Input Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-03-29 20:33:25 --> Language Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Loader Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> Controller Class Initialized
+DEBUG - 2012-03-29 20:33:25 --> File loaded: system/views/main_view.php
+DEBUG - 2012-03-29 20:33:25 --> Final output sent to browser
+DEBUG - 2012-03-29 20:33:25 --> Total execution time: 0.0282
+DEBUG - 2012-03-29 20:33:28 --> Config Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Hooks Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Utf8 Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> UTF-8 Support Enabled
+DEBUG - 2012-03-29 20:33:28 --> URI Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Router Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> No URI present. Default controller set.
+DEBUG - 2012-03-29 20:33:28 --> Output Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Security Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Input Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-03-29 20:33:28 --> Language Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Loader Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> Controller Class Initialized
+DEBUG - 2012-03-29 20:33:28 --> File loaded: system/views/main_view.php
+DEBUG - 2012-03-29 20:33:28 --> Final output sent to browser
+DEBUG - 2012-03-29 20:33:28 --> Total execution time: 0.0277
+DEBUG - 2012-03-29 20:37:01 --> Config Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Hooks Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Utf8 Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> UTF-8 Support Enabled
+DEBUG - 2012-03-29 20:37:01 --> URI Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Router Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> No URI present. Default controller set.
+DEBUG - 2012-03-29 20:37:01 --> Output Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Security Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Input Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-03-29 20:37:01 --> Language Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Loader Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> Controller Class Initialized
+DEBUG - 2012-03-29 20:37:01 --> File loaded: system/views/main_view.php
+DEBUG - 2012-03-29 20:37:01 --> Final output sent to browser
+DEBUG - 2012-03-29 20:37:01 --> Total execution time: 0.0322
+DEBUG - 2012-03-29 20:37:02 --> Config Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Hooks Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Utf8 Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> UTF-8 Support Enabled
+DEBUG - 2012-03-29 20:37:02 --> URI Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Router Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> No URI present. Default controller set.
+DEBUG - 2012-03-29 20:37:02 --> Output Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Security Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Input Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-03-29 20:37:02 --> Language Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Loader Class Initialized
+DEBUG - 2012-03-29 20:37:02 --> Controller Class Initialized
+DEBUG - 2012-03-29 20:37:03 --> File loaded: system/views/main_view.php
+DEBUG - 2012-03-29 20:37:03 --> Final output sent to browser
+DEBUG - 2012-03-29 20:37:03 --> Total execution time: 0.0300

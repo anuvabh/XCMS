@@ -1,11 +1,15 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Main extends CI_Controller {
-
+	
 	public function index()
 	{
-		$this->load->view("index_view");
+		$data = array(
+				'message' => 'Log In',
+				'errorcode' => -1
+				);
+		$this->load->view("main_view", $data);
 	}
-	public function staticPages($url=''){}
+	public function pages($url=''){}
 	public function myCredits(){}
 }

@@ -1,11 +1,13 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Accounts extends CI_Controller {
-
+class Accounts extends CI_Controller 
+{
+    /*--- login --- */
     public function login()
     {
+        //someone is already logged in
         if($this->session->userdata('UserID'))
-		{
+	{
             redirect(site_url().'main', 'location');
             return;
         }
@@ -14,7 +16,6 @@ class Accounts extends CI_Controller {
         {
             
             $this->load->model('user');
-
             $check = $this->user->login($this->input->post('username'), $this->input->post('password'));
             
             if( $check->errorCode == 0 )//login successfull
@@ -27,48 +28,56 @@ class Accounts extends CI_Controller {
                         'Department' => $check->Department,
                         'Roll' => $check->Roll
                         );
+                //we create the session
                 $this->session->set_userdata($data);
                 redirect(site_url().'main', 'location');
                 return;
             }
             else
             {
-
                 $data = array(
                         'message' => 'Invalid Username/Password',
                         'errorcode' => $check->errorCode
                         );
+                
                 $this->load->view("main_view", $data);
             }
         }
-        else		//Username or password has not been posted
+        else//Username or password has not been posted
         {
             $data = array(
-            'message' => 'Enter Username/Password',
-            'errorcode' => 1010
-            );
+                    'message' => 'Enter Username/Password',
+                    'errorcode' => 1010
+                    );
+            
             $this->load->view('main_view', $data);
         }
     }
     //end of login()
 	
+    /*---  logout() ----*/
     public function logout()
     {        
         $this->session->sess_destroy();
         redirect(site_url().'main', 'location');
     }
-    public function edit(){}
+    //end of logout()
+  
+    
+    /*--- register ---*/
     public function register()
     {
-        
         $this->load->model('user');
         $dept = $this->user->fetchDepartments();
-        $data = array('dept' => $dept,
-                      'errorMessage' => "");
+        
+        $data = array
+                ('dept' => $dept,
+                'errorMessage' => "");
         $errorMessage = "";
+        
+        //someone is already logged in...
         if($this->session->userdata('UserID'))
         {
-            
             redirect(site_url().'main', 'location');
             return;
         }
@@ -85,6 +94,7 @@ class Accounts extends CI_Controller {
         {   
             $error = 0;
             $this->load->helper('email');
+            
             if($Password != $Password1)
             {
                $error = 1;
@@ -109,12 +119,13 @@ class Accounts extends CI_Controller {
             }
             if($error == 0)
             {
-                $info = array( 'FirstName' => $FirstName,
-                                'LastName' => $LastName,
-                                'Roll' => $Roll,
-                                'Department' => $Department,
-                                'Email' => $Email,
-                                'Password' =>$Password);
+                $info = array( 
+                        'FirstName' => $FirstName,
+                        'LastName' => $LastName,
+                        'Roll' => $Roll,
+                        'Department' => $Department,
+                        'Email' => $Email,
+                        'Password' =>$Password);
 
                 $result = $this->user->register($info);//later we'll check for errors
 
@@ -144,5 +155,9 @@ class Accounts extends CI_Controller {
             $this->load->view('register_view', $data);
         }
     }
+    //end of register() 
     public function view(){}
+    public function edit(){}
 }
+/* End of file accounts.php */
+/* Location: ./system/controllers/accounts.php */    

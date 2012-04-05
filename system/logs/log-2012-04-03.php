@@ -1594,3 +1594,537 @@ DEBUG - 2012-04-03 15:16:45 --> Language Class Initialized
 DEBUG - 2012-04-03 15:16:45 --> Loader Class Initialized
 DEBUG - 2012-04-03 15:16:45 --> Controller Class Initialized
 ERROR - 2012-04-03 15:16:45 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 18:18:46 --> Config Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:18:46 --> URI Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Router Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 18:18:46 --> Output Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Security Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Input Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:18:46 --> Language Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> Controller Class Initialized
+DEBUG - 2012-04-03 18:18:46 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:18:46 --> Final output sent to browser
+DEBUG - 2012-04-03 18:18:46 --> Total execution time: 0.0493
+DEBUG - 2012-04-03 18:23:39 --> Config Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:23:39 --> URI Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Router Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 18:23:39 --> Output Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Security Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Input Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:23:39 --> Language Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> Controller Class Initialized
+DEBUG - 2012-04-03 18:23:39 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:23:39 --> Final output sent to browser
+DEBUG - 2012-04-03 18:23:39 --> Total execution time: 0.0475
+DEBUG - 2012-04-03 18:23:43 --> Config Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:23:43 --> URI Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Router Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Output Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Security Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Input Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:23:43 --> Language Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:23:43 --> Controller Class Initialized
+ERROR - 2012-04-03 18:23:43 --> Severity: Notice  --> Undefined variable: check C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+ERROR - 2012-04-03 18:23:43 --> Severity: Notice  --> Trying to get property of non-object C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+DEBUG - 2012-04-03 18:23:43 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:23:43 --> Final output sent to browser
+DEBUG - 2012-04-03 18:23:43 --> Total execution time: 0.0470
+DEBUG - 2012-04-03 18:23:53 --> Config Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:23:53 --> URI Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Router Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Output Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Security Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Input Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:23:53 --> Language Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:23:53 --> Controller Class Initialized
+ERROR - 2012-04-03 18:23:54 --> Severity: Notice  --> Undefined variable: check C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+ERROR - 2012-04-03 18:23:54 --> Severity: Notice  --> Trying to get property of non-object C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+DEBUG - 2012-04-03 18:23:54 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:23:54 --> Final output sent to browser
+DEBUG - 2012-04-03 18:23:54 --> Total execution time: 0.0505
+DEBUG - 2012-04-03 18:24:01 --> Config Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:24:01 --> URI Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Router Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Output Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Security Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Input Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:24:01 --> Language Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:24:01 --> Controller Class Initialized
+ERROR - 2012-04-03 18:24:01 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 18:24:13 --> Config Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:24:13 --> URI Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Router Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Output Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Security Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Input Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:24:13 --> Language Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:24:13 --> Controller Class Initialized
+ERROR - 2012-04-03 18:24:13 --> Severity: Notice  --> Undefined variable: check C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+ERROR - 2012-04-03 18:24:13 --> Severity: Notice  --> Trying to get property of non-object C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+DEBUG - 2012-04-03 18:24:13 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:24:13 --> Final output sent to browser
+DEBUG - 2012-04-03 18:24:13 --> Total execution time: 0.0469
+DEBUG - 2012-04-03 18:24:17 --> Config Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Hooks Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 18:24:17 --> URI Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Router Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 18:24:17 --> Output Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Security Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Input Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 18:24:17 --> Language Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Loader Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> Controller Class Initialized
+DEBUG - 2012-04-03 18:24:17 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 18:24:17 --> Final output sent to browser
+DEBUG - 2012-04-03 18:24:17 --> Total execution time: 0.0411
+DEBUG - 2012-04-03 20:00:11 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:11 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Router Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:00:11 --> Output Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Security Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Input Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:00:11 --> Language Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:00:11 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:00:11 --> Final output sent to browser
+DEBUG - 2012-04-03 20:00:11 --> Total execution time: 0.0444
+DEBUG - 2012-04-03 20:00:14 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:14 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:14 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:14 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:14 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:14 --> Router Class Initialized
+ERROR - 2012-04-03 20:00:14 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:00:20 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:20 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:20 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:20 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:20 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:20 --> Router Class Initialized
+ERROR - 2012-04-03 20:00:20 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:00:28 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:28 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:28 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:28 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:28 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:28 --> Router Class Initialized
+ERROR - 2012-04-03 20:00:28 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:00:31 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:31 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:31 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:31 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:31 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:31 --> Router Class Initialized
+ERROR - 2012-04-03 20:00:31 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:00:38 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:38 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:38 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:38 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:38 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:38 --> Router Class Initialized
+ERROR - 2012-04-03 20:00:38 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:00:48 --> Config Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:00:48 --> URI Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Router Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Output Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Security Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Input Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:00:48 --> Language Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:00:48 --> Controller Class Initialized
+ERROR - 2012-04-03 20:00:48 --> Severity: Notice  --> Undefined variable: check C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+ERROR - 2012-04-03 20:00:48 --> Severity: Notice  --> Trying to get property of non-object C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+DEBUG - 2012-04-03 20:00:48 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:00:48 --> Final output sent to browser
+DEBUG - 2012-04-03 20:00:48 --> Total execution time: 0.0489
+DEBUG - 2012-04-03 20:05:49 --> Config Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:05:49 --> URI Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Router Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:05:49 --> Output Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Security Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Input Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:05:49 --> Language Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:05:49 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:05:49 --> Final output sent to browser
+DEBUG - 2012-04-03 20:05:49 --> Total execution time: 0.0707
+DEBUG - 2012-04-03 20:05:53 --> Config Class Initialized
+DEBUG - 2012-04-03 20:05:53 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:05:53 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:05:53 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:05:53 --> URI Class Initialized
+DEBUG - 2012-04-03 20:05:53 --> Router Class Initialized
+ERROR - 2012-04-03 20:05:53 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:06:04 --> Config Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:06:04 --> URI Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Router Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:06:04 --> Output Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Security Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Input Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:06:04 --> Language Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:06:04 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:06:04 --> Final output sent to browser
+DEBUG - 2012-04-03 20:06:04 --> Total execution time: 0.0486
+DEBUG - 2012-04-03 20:06:07 --> Config Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:06:07 --> URI Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Router Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Output Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Security Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Input Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:06:07 --> Language Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:06:07 --> Controller Class Initialized
+ERROR - 2012-04-03 20:06:08 --> Severity: Notice  --> Undefined variable: check C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+ERROR - 2012-04-03 20:06:08 --> Severity: Notice  --> Trying to get property of non-object C:\Software\xampp\htdocs\XCMS\system\controllers\accounts.php 43
+DEBUG - 2012-04-03 20:06:08 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:06:08 --> Final output sent to browser
+DEBUG - 2012-04-03 20:06:08 --> Total execution time: 0.0534
+DEBUG - 2012-04-03 20:11:03 --> Config Class Initialized
+DEBUG - 2012-04-03 20:11:03 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:11:03 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:11:03 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:11:03 --> URI Class Initialized
+DEBUG - 2012-04-03 20:11:03 --> Router Class Initialized
+ERROR - 2012-04-03 20:11:03 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:11:12 --> Config Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:11:12 --> URI Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Router Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:11:12 --> Output Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Security Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Input Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:11:12 --> Language Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:11:12 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:11:12 --> Final output sent to browser
+DEBUG - 2012-04-03 20:11:12 --> Total execution time: 0.0420
+DEBUG - 2012-04-03 20:11:18 --> Config Class Initialized
+DEBUG - 2012-04-03 20:11:18 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:11:18 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:11:18 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:11:18 --> URI Class Initialized
+DEBUG - 2012-04-03 20:11:18 --> Router Class Initialized
+ERROR - 2012-04-03 20:11:18 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:11:44 --> Config Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:11:44 --> URI Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Router Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:11:44 --> Output Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Security Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Input Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:11:44 --> Language Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:11:44 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:11:44 --> Final output sent to browser
+DEBUG - 2012-04-03 20:11:44 --> Total execution time: 0.0424
+DEBUG - 2012-04-03 20:11:48 --> Config Class Initialized
+DEBUG - 2012-04-03 20:11:48 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:11:48 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:11:48 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:11:48 --> URI Class Initialized
+DEBUG - 2012-04-03 20:11:48 --> Router Class Initialized
+ERROR - 2012-04-03 20:11:48 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:12:30 --> Config Class Initialized
+DEBUG - 2012-04-03 20:12:30 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:12:30 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:12:30 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:12:30 --> URI Class Initialized
+DEBUG - 2012-04-03 20:12:30 --> Router Class Initialized
+ERROR - 2012-04-03 20:12:30 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:12:33 --> Config Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:12:33 --> URI Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Router Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:12:33 --> Output Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Security Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Input Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:12:33 --> Language Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:12:33 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:12:33 --> Final output sent to browser
+DEBUG - 2012-04-03 20:12:33 --> Total execution time: 0.0472
+DEBUG - 2012-04-03 20:13:51 --> Config Class Initialized
+DEBUG - 2012-04-03 20:13:51 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:13:51 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:13:51 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:13:51 --> URI Class Initialized
+DEBUG - 2012-04-03 20:13:51 --> Router Class Initialized
+ERROR - 2012-04-03 20:13:51 --> 404 Page Not Found --> XCMS
+DEBUG - 2012-04-03 20:14:18 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:18 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:14:18 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:18 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:14:18 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:14:18 --> Final output sent to browser
+DEBUG - 2012-04-03 20:14:18 --> Total execution time: 0.0576
+DEBUG - 2012-04-03 20:14:23 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:23 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:23 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Model Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Model Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> Database Driver Class Initialized
+DEBUG - 2012-04-03 20:14:23 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:14:23 --> Final output sent to browser
+DEBUG - 2012-04-03 20:14:23 --> Total execution time: 0.0630
+DEBUG - 2012-04-03 20:14:29 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:29 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:29 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:29 --> Controller Class Initialized
+ERROR - 2012-04-03 20:14:29 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 20:14:46 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:46 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:46 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:46 --> Controller Class Initialized
+ERROR - 2012-04-03 20:14:46 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 20:14:49 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:49 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:49 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:49 --> Controller Class Initialized
+ERROR - 2012-04-03 20:14:49 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 20:14:58 --> Config Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:14:58 --> URI Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Router Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:14:58 --> Output Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Security Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Input Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:14:58 --> Language Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:14:58 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:14:58 --> Final output sent to browser
+DEBUG - 2012-04-03 20:14:58 --> Total execution time: 0.0434
+DEBUG - 2012-04-03 20:15:06 --> Config Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:15:06 --> URI Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Router Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Output Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Security Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Input Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:15:06 --> Language Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Model Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Model Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> Database Driver Class Initialized
+DEBUG - 2012-04-03 20:15:06 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:15:06 --> Final output sent to browser
+DEBUG - 2012-04-03 20:15:06 --> Total execution time: 0.0629
+DEBUG - 2012-04-03 20:15:09 --> Config Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:15:09 --> URI Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Router Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Output Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Security Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Input Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:15:09 --> Language Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:15:09 --> Controller Class Initialized
+ERROR - 2012-04-03 20:15:09 --> 404 Page Not Found --> accounts/index
+DEBUG - 2012-04-03 20:27:02 --> Config Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:27:02 --> URI Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Router Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:27:02 --> Output Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Security Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Input Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:27:02 --> Language Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:27:02 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:27:02 --> Final output sent to browser
+DEBUG - 2012-04-03 20:27:02 --> Total execution time: 0.0513
+DEBUG - 2012-04-03 20:27:09 --> Config Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:27:09 --> URI Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Router Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Output Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Security Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Input Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:27:09 --> Language Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Model Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Model Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> Database Driver Class Initialized
+DEBUG - 2012-04-03 20:27:09 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:27:09 --> Final output sent to browser
+DEBUG - 2012-04-03 20:27:09 --> Total execution time: 0.0654
+DEBUG - 2012-04-03 20:27:15 --> Config Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:27:15 --> URI Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Router Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> No URI present. Default controller set.
+DEBUG - 2012-04-03 20:27:15 --> Output Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Security Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Input Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:27:15 --> Language Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:27:15 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:27:15 --> Final output sent to browser
+DEBUG - 2012-04-03 20:27:15 --> Total execution time: 0.0463
+DEBUG - 2012-04-03 20:27:23 --> Config Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Hooks Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Utf8 Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> UTF-8 Support Enabled
+DEBUG - 2012-04-03 20:27:23 --> URI Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Router Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Output Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Security Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Input Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Global POST and COOKIE data sanitized
+DEBUG - 2012-04-03 20:27:23 --> Language Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Loader Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Controller Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Model Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Model Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> Database Driver Class Initialized
+DEBUG - 2012-04-03 20:27:23 --> File loaded: system/views/main_view.php
+DEBUG - 2012-04-03 20:27:23 --> Final output sent to browser
+DEBUG - 2012-04-03 20:27:23 --> Total execution time: 0.0616

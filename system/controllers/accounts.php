@@ -12,7 +12,7 @@ class Accounts extends CI_Controller
             return;
         }
         
-        if($this->input->post('username') && $this->input->post('password'))
+        if($this->input->post('username') && $this->input->post('password'))//user has been kind enough to enter data
         {
             
             $this->load->model('user');
@@ -70,9 +70,10 @@ class Accounts extends CI_Controller
         $this->load->model('user');
         $dept = $this->user->fetchDepartments();
         
-        $data = array
-                ('dept' => $dept,
+        $data = array(
+                'dept' => $dept,
                 'errorMessage' => "");
+        
         $errorMessage = "";
         
         //someone is already logged in...
@@ -82,6 +83,9 @@ class Accounts extends CI_Controller
             return;
         }
         
+        $Code = $this->input->post('Code');
+        $Year = $this->input->post('Year');
+        $Room = $this->input->post('Room');
         $FirstName = $this->input->post('FirstName');    
         $LastName = $this->input->post('LastName');
         $Roll = $this->input->post('Roll');
@@ -90,31 +94,45 @@ class Accounts extends CI_Controller
         $Password1 = $this->input->post('Password1');
         $Password = $this->input->post('Password');
         
-        if(strlen($FirstName)*strlen($LastName)*strlen($Roll)*strlen($Email)*strlen($Password1)*strlen($Password) != 0)
-        {   
+        if(strlen($Code)*strlen($FirstName)*strlen($LastName)*strlen($Roll)*strlen($Email)*strlen($Password1)*strlen($Password) != 0)
+        {//all fields have been filled, hence we proceed...   
             $error = 0;
             $this->load->helper('email');
             
+            //we need to check validity of the acces code
+            /*------*/
+            $this->load->model('block');
+            $result =  $this->block->checkValidity($Code, $Department, $Year, $Room);
+            
+            if($result->error)
+            {
+                $error = 1;
+                $errorMessage = "Wrong Access Code<br />";
+            }
+            
+            /*------*/
+            
+            
             if($Password != $Password1)
             {
-               $error = 1;
+               $error = 2;
                $errorMessage = "Passwords should match<br />";
             }
             if(!is_numeric($Roll))
             {
-                $error = $error*10 + 2;
-                echo $Roll;
+                $error = $error*10 + 3;
                 $errorMessage = $errorMessage."Roll should be an integer<br />";
             }
             if(!valid_email($Email))
             {
-                $error = $error*10 + 3;
+                $error = $error*10 + 4;
                 $errorMessage = $errorMessage."Email id should be valid<br />";
             }
             
-           if ($this->user->checkEmail($Email) != 0)
+           if ($this->user->fetchUserID($Email) != 0)
             {
-               $error = $error*10 + 4;
+               $error = $error*10 + 5;
+                
                $errorMessage = $errorMessage."Choose different email id<br />";
             }
             if($error == 0)
@@ -125,10 +143,11 @@ class Accounts extends CI_Controller
                         'Roll' => $Roll,
                         'Department' => $Department,
                         'Email' => $Email,
-                        'Password' =>$Password);
+                        'Password' => $Password,
+                        'Code' => $Code);
 
                 $result = $this->user->register($info);//later we'll check for errors
-
+                                                       //YES, WE WILL
                 $data = array(
                         'UserID' => $result->UserID,
                         'UserType' => $result->UserType,//might need to use escape and change wherever needed
@@ -151,7 +170,7 @@ class Accounts extends CI_Controller
         }    
         else
         {
-            echo "4";
+            $data['errorMessage'] = 'Please fill all fields';
             $this->load->view('register_view', $data);
         }
     }

@@ -29,7 +29,7 @@
     <p><?php
         if($errorcode == 0)
         {
-                echo $message."<br />";
+            echo $message."<br />";
         }
         else
         {
@@ -48,9 +48,9 @@
                 <td><input type="password" name="password" /></td>
             </tr>
         </table>
-    <input type="submit" value="Log In" name="submit" />
+        <input type="submit" value="Log In" name="submit" />
     </form>
-
+       
     <p><strong>New</strong> to the College? <br />
     <a style="text-decoration:none;color:#900;" href="http://localhost/xcms/accounts/register">Register Here</a></p>
     </div>

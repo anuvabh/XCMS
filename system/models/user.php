@@ -42,12 +42,15 @@ class User extends CI_Model
     }//end of login()
 	
     /*--- checkEmail ---*/
-    function checkEmail($email)
+    function fetchUserID($email)
     {
         $sql = "SELECT UserID FROM users WHERE Email=".$this->db->escape($email);
         $query = $this->db->query($sql);
 
-        return $query->num_rows();
+        if($query->num_rows() > 0)
+            return $query->row()->UserID;
+        else
+            return 0;
     }
     //end of checkEmail()
     
@@ -76,6 +79,10 @@ class User extends CI_Model
         {
             $this->error = TRUE;
         }
+        
+        $sql = "UPDATE codesetsinfo set UserID=".$this->UserID." where Code=".$data['Code'];
+        $this->db->query($sql);
+        
         return $this;
     }//end of register()
     

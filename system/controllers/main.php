@@ -14,18 +14,26 @@ class Main extends CI_Controller {
                     'Department' => $this->session->userdata('Department'),
                     'Roll' => $this->session->userdata('Roll')
                     );
-            //we load the releant view
+            //we load the relevant view
             if($userType == 'system')
             {
                 $this->load->view('sysadmin_view', $data);
+                $this->load->view('links');
             }
             else if($userType == 'dept')
             {
                 $this->load->view('deptadmin_view', $data);
+                $this->load->view('links');
             }
             else if($userType == 'student')
             {
                 $this->load->view('student_view', $data);
+                $this->load->view('links');
+            }
+            else if($userType == 'cr')//cr_view to be merged
+            {
+                $this->load->view('cr_view', $data);
+                $this->load->view('links');
             }
         }
         else

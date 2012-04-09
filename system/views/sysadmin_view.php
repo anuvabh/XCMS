@@ -7,6 +7,7 @@ SYS ADMIN VIEW PAGE
 ?>
     <br />
     
-    <a href="http://localhost/xcms/accounts/logout">Click to logout</a>
-    <a href="http://localhost/xcms/blocks/generateSet">Generate Codes</a>
+    <a href="http://localhost/xcms/blocks/generateSet">Generate Codes</a><br/>
+    <a href="http://localhost/xcms/accounts/register/cr">Create new CR</a><br/>
+    <a href="http://localhost/xcms/blocks/create">Create Block</a><br/>
 </html>

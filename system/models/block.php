@@ -2,49 +2,62 @@
 
 class Block extends CI_Model
 {
-    function generate($crID, $amount, $blockID)
+    function createBlock($d, $y, $r)
     {
+        $blockID = time();
+        $sql = "INSERT INTO blocksinfo values(".$blockID.
+                ", ".$this->db->escape($d).
+                ", ".$y.
+                ", ".$r.", NULL)";//we might need to use escape for non-numeric (like mcv) rooms
+        $query = $this->db->query($sql);
+    }
+    function generate($crID, $amount, $blockID)
+    {   
+        /*$sql = "SELECT max(BlockSetID) blockSetID FROM blocksetsinfo GROUP BY BlockID HAVING BlockID=".$blockID;
+        $query = $this->db->query($sql);*/
         $blockSetID = time();
+        
+        /*if($query->num_rows() > 0)
+            $blockSetID = $query->row()->blockSetID + 1;*/
+        
         $sql = "INSERT INTO blocksetsinfo VALUES(".$blockSetID.
                 ", ".$blockID.
-                ", ".$crID.
                 ", 1".
                 ", ".$amount.")";
         
         $query = $this->db->query($sql);
         $i = 0;
+        $codes = "";
         while($amount > 0)
-        {
-            /*$sql = "INSERT INTO codesetsinfo(BlockSetID,Code,Valid,UserID) values(".$blockSetID.
-                    ", CAST(RAND()*8999999999+1000000000 AS UNSIGNED)".
-                    ",1, NULL)";*/
-            
-            $sql = "SELECT CAST((RAND()*89) + 10 AS UNSIGNED) AS Code";
+        { 
+            $sql = "SELECT CAST((RAND()*8999999999) + 100000000 AS UNSIGNED) AS Code";
             $query = $this->db->query($sql);
             $Code = $query->row()->Code;
-            echo $Code."<br />";
+            $codes[$i++] = $Code;
             $sql = "SELECT Code FROM codesetsinfo WHERE Code=".$Code;
             $query = $this->db->query($sql);
-          
-            $i++;
-            
-            if($query->num_rows() == 0)
+             
+              if($query->num_rows() == 0)
             {
                 $sql = "INSERT INTO codesetsinfo(BlockSetID,Code,Valid,UserID) values(".$blockSetID.
                     ", ".$Code.
                     ", 1, NULL)";
                 $this->db->query($sql);
+             
                 $amount--;
             }
             
         }    
-        echo $i."asdasdasds";
-        return $blockSetID;
+        $this->blockSetID = $blockSetID;
+        $this->codes = $codes;
+        $this->limit = $i;
+        
+        return $this;
     
     }
     function fetchBlockSetsID($blockID)
     {
-        $sql = "SELECT BlockSetID FROM blocksetsinfo WHERE BlockID=".$this->db->escape($blockID);
+        $sql = "SELECT BlockSetID FROM blocksetsinfo WHERE status=1 AND BlockID=".$blockID;
         $query = $this->db->query($sql);
         
         if($query->num_rows() > 0)
@@ -118,10 +131,48 @@ class Block extends CI_Model
             return $this;
         }
       
+    }    
+    function freeze($blockSetID)
+    {
+        $sql = "UPDATE blocksetsinfo SET status=0 WHERE BlockSetID=".$blockSetID;
+        $query = $this->db->query($sql);
+        if ($this->db->affected_rows()>0)   //should we make the codes also invalid when we make the code set invalid?
+            return true;
+        else
+            return false;
     }
     
-    function freeze($blockSetID)
-    {}
+    function checkRoom($room)
+    {
+        $sql = "SELECT Room FROM blocksinfo";
+        $query = $this->db->query($sql);
+        $validRooms = $query->result_array();
+        
+        foreach($validRooms as $x)
+        {
+            if($room == $x['Room'])
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    function blockHasCR($blockID)
+    {
+        $sql = "SELECT CRID FROM blocksinfo WHERE CRID IS NOT NULL AND BlockID=".$blockID;
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() == 0)
+            return 0;
+        else 
+            return $query->row()->CRID;
+    }
+    function assignCRBlock($crID, $blockID)
+    {
+        $sql = "UPDATE blocksinfo set CRID=".$crID." WHERE BlockID=".$blockID;
+        $query = $this->db->query($sql);
+    }
 }
 /* End of file block.php */
 /* Location: ./system/models/block.php */    

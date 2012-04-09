@@ -1,9 +1,18 @@
 <html>
-    <p><?php echo $errorMessage?></p>
-    <form method="post" action="http://localhost/xcms/accounts/register">
+    <p><?php echo $errorMessage;
+    if($this->session->userdata('UserType') == 'system')
+        $t = "http://localhost/xcms/accounts/register/cr";
+    else
+        $t = "http://localhost/xcms/accounts/register";
+    ?></p>
+    <form method="post" action="<?php echo $t;?>">
         <table>
-   
-            <tr><td>Registration Code:</td><td><input type="text" name="Code" /></td></tr>
+            <?php 
+              if($this->session->userdata('UserType') != 'system')
+              {
+                echo '<tr><td>Registration Code:</td><td><input type="text" name="Code" /></td></tr>';
+              }
+            ?>
             <tr><td>First Name:</td><td><input type="text" name="FirstName" value="<?php if (isset($_POST['FirstName'])) echo $_POST['FirstName'];?>"/></td></tr>
             <tr><td>Last Name:</td><td><input type="text" name="LastName" value="<?php if (isset($_POST['LastName'])) echo $_POST['LastName'];?>"/></td></tr>
             <tr><td>Email ID:</td><td><input type="text" name="Email" value="<?php if (isset($_POST['Email'])) echo $_POST['Email'];?>"/></td></tr>

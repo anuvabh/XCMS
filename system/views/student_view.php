@@ -10,5 +10,5 @@ STUDENT VIEW PAGE
     <br />
     <a href = "http://localhost/xcms/Events/register">Click to view Events</a>
     <br />
-    <a href="http://localhost/xcms/accounts/logout">Click to logout</a>
+    
 </html>

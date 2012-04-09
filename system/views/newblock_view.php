@@ -2,14 +2,12 @@
     <?php
         echo $errorMessage;
     ?>
-<form method="POST">
-    <table>
-        <tr>
-            <td>CR Username:</td><td><input type="text" name="cr" value="<?php if (isset($_POST['cr'])) echo $_POST['cr'];?>"/></td>
-        </tr>
-        <tr><td>Room No.:</td><td><input type="text" name="Room" value="<?php if (isset($_POST['Room'])) echo $_POST['Room'];?>"/></td></tr>
+    <form method="POST">
+        
+        <table>
+            <tr><td>Room No.:</td><td><input type="text" name="Room" value="<?php if (isset($_POST['Room'])) echo $_POST['Room'];?>"/></td></tr>
             <tr><td>Department:</td>
-                <td><select name="Department"> 
+                <td><select name="Department">
                     <?php
                         foreach($dept as $row)
                         {
@@ -27,10 +25,7 @@
                         <option>5</option>
                     </select>
                 </td></tr>
-             <tr><td>Number of codes:</td><td><input type="text" name="net" /></td></tr>
-    </table>
-    <input type="submit" value="Generate" />
-    <br/>
-    <a href="http://localhost/xcms/main">Click to cancel</a>
-</form>
+        </table>
+        <input type="submit" value="Create" />
+    </form>
 </html>

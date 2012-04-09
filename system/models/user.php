@@ -55,7 +55,7 @@ class User extends CI_Model
     //end of checkEmail()
     
     /*--- register---*/
-    function register($data, $type = 'student')
+    function register($data, $type)
     {
         $this->UserID = time();
         $this->UserType = $type;
@@ -79,9 +79,11 @@ class User extends CI_Model
         {
             $this->error = TRUE;
         }
-        
-        $sql = "UPDATE codesetsinfo set UserID=".$this->UserID." where Code=".$data['Code'];
-        $this->db->query($sql);
+        if($type == 'student')
+        {
+            $sql = "UPDATE codesetsinfo set UserID=".$this->UserID." where Code=".$data['Code'];
+            $this->db->query($sql);
+        }
         
         return $this;
     }//end of register()
@@ -94,7 +96,48 @@ class User extends CI_Model
 
         return $query->result_array();
     }
+    
+    function checkDept($username, $department)
+    {
+        $sql = "SELECT Email from users where Department=".$this->db->escape($department)." and Email=".$this->db->escape($username);
+        
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() > 0)
+            return true;
+        else
+            return false;
+    }
+    
+    function isCR($username)
+    {
+        $sql = "SELECT UserType from users where UserType='cr' and Email=".$this->db->escape($username);
+        
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() > 0)
+            return true;
+        else
+            return false;
+    }
+    
     //end of fetchDepartments()
+    function changePassword($UserID, $oldPass, $newPass)
+    {
+        $sql = "SELECT UserID FROM users WHERE UserID=".$UserID." AND Password=".$this->db->escape($oldPass);
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() > 0)
+        {
+             $sql = "UPDATE users SET Password=".$this->db->escape($newPass)." WHERE UserID=".$UserID;
+             $query = $this->db->query($sql);
+             return true;
+        }
+        return false;
+    }
+    
+    
+    
 }
 /* End of file user.php */
 /* Location: ./system/models/user.php */    

@@ -4,12 +4,15 @@ class Block extends CI_Model
 {
     function createBlock($d, $y, $r)
     {
+        
         $blockID = time();
+        
         $sql = "INSERT INTO blocksinfo values(".$blockID.
                 ", ".$this->db->escape($d).
                 ", ".$y.
                 ", ".$r.", NULL)";//we might need to use escape for non-numeric (like mcv) rooms
         $query = $this->db->query($sql);
+        return $blockID;
     }
     function generate($crID, $amount, $blockID)
     {   
@@ -37,7 +40,7 @@ class Block extends CI_Model
             $sql = "SELECT Code FROM codesetsinfo WHERE Code=".$Code;
             $query = $this->db->query($sql);
              
-              if($query->num_rows() == 0)
+            if($query->num_rows() == 0)
             {
                 $sql = "INSERT INTO codesetsinfo(BlockSetID,Code,Valid,UserID) values(".$blockSetID.
                     ", ".$Code.
@@ -171,6 +174,39 @@ class Block extends CI_Model
     function assignCRBlock($crID, $blockID)
     {
         $sql = "UPDATE blocksinfo set CRID=".$crID." WHERE BlockID=".$blockID;
+        $query = $this->db->query($sql);
+    }
+    
+    function departmentExists($dcode, $dname=false)
+    {
+        if(!$dname)
+        {
+            $sql = "SELECT Code FROM departments WHERE Code=".$this->db->escape($dcode);
+            $query = $this->db->query($sql);
+            if($query->num_rows() == 0)
+                return 1;
+
+            return 0;
+        }
+        else
+        {
+            $sql = "SELECT Code FROM departments WHERE Code=".$this->db->escape($dcode)." OR Name=".$this->db->escape($dname);
+            $query = $this->db->query($sql);
+
+            if($query->num_rows() == 0)
+                return 1;
+
+            return 0;
+        }
+    }
+    function createDepartment($Department, $Dcode, $Type)
+    {
+        $sql = "INSERT INTO departments VALUES(".$this->db->escape($Dcode).",".$this->db->escape($Department).",".$this->db->escape($Type).")";
+        $query = $this->db->query($sql);
+    }
+    function removeDepartment($Dcode)
+    {
+        $sql = "DELETE FROM departments WHERE Code=".$this->db->escape($Dcode);
         $query = $this->db->query($sql);
     }
 }

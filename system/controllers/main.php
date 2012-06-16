@@ -18,22 +18,22 @@ class Main extends CI_Controller {
             if($userType == 'system')
             {
                 $this->load->view('sysadmin_view', $data);
-                $this->load->view('links');
+               
             }
             else if($userType == 'dept')
             {
                 $this->load->view('deptadmin_view', $data);
-                $this->load->view('links');
+                
             }
             else if($userType == 'student')
             {
                 $this->load->view('student_view', $data);
-                $this->load->view('links');
+                
             }
             else if($userType == 'cr')//cr_view to be merged
             {
                 $this->load->view('cr_view', $data);
-                $this->load->view('links');
+                
             }
         }
         else

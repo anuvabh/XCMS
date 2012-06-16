@@ -1,0 +1,46 @@
+@import url('bootstrap.css');
+/*@import url('bootstrap-responsive.css');*/
+body
+{	
+    background: url('http://localhost/xcms/images/backsliced.jpg');
+    background-repeat: repeat-x;
+}
+.shadow
+{
+    box-shadow: rgba(11,110,110,.75) 0px 2px 10px;
+}
+.well
+{
+    /*background-color: #c8e1ec;*/
+    /*background-color: #d1e9ed
+    /*background-color: #d5f3f8;*/
+}
+.center
+{
+    text-align: center;
+}
+.border
+{
+    border: 1px solid black;
+}
+#heading
+{
+
+}
+#login
+{
+    padding: 15px;
+    border-radius: 15px;
+    background: #348fb9;
+}
+#login-box
+{
+    width: 400px;
+    left: 54%;
+}
+#carousel-div
+{
+    padding: 10px;
+    border-radius: 15px;
+    background: #348fb9;
+}

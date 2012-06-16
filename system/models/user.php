@@ -59,26 +59,30 @@ class User extends CI_Model
     {
         $this->UserID = time();
         $this->UserType = $type;
+        $this->error=false;
 
-        $sql = "INSERT INTO users VALUES(".
-                $this->UserID.",".
-                $this->db->escape($type).",".
-                $this->db->escape($data['FirstName']).",".
-                $this->db->escape($data['LastName']).",".
-                $this->db->escape($data['Department']).",".
-                $data['Roll'].",".
-                $this->db->escape($data['Email']).",".
-                $this->db->escape($data['Password']).",1)";
+        $sql = "SELECT UserID FROM users WHERE Email=".$this->db->escape($data['Email']);
+        $query = $this->db->query($sql);
+        
+        if($query->num_rows() > 0)
+            $this->error=true;
+        else
+        {    
+        
+            $sql = "INSERT INTO users VALUES(".
+                    $this->UserID.",".
+                    $this->db->escape($type).",".
+                    $this->db->escape($data['FirstName']).",".
+                    $this->db->escape($data['LastName']).",".
+                    $this->db->escape($data['Department']).",".
+                    $data['Roll'].",".
+                    $this->db->escape($data['Email']).",".
+                    $this->db->escape($data['Password']).",1)";
 
-        $this->db->query($sql);
-
-        $query = $this->db->affected_rows();
-
-        // Should be 1 but still we check...
-        if ($query < 1)
-        {
-            $this->error = TRUE;
+            $this->db->query($sql);
         }
+
+        
         if($type == 'student')
         {
             $sql = "UPDATE codesetsinfo set UserID=".$this->UserID." where Code=".$data['Code'];
@@ -135,7 +139,16 @@ class User extends CI_Model
         }
         return false;
     }
-    
+    function allUsers()
+    {
+        $sql = "SELECT * FROM users";
+        $query = $this->db->query($sql);
+        $users = $query->result_array();
+        return $users;
+        
+            
+
+    }
     
     
 }

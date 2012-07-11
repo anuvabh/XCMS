@@ -1,19 +1,22 @@
-<!doctype html>
+<!doctype HTML>
 <html lang="en">
+    
     <head>
-    
-    <title>Create Department</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Create New Department</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="http://localhost/xcms/css/site.css" />
-    
+        <link rel="stylesheet" href="http://localhost/xcms/css/site.css" />
+       
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->    
         <script type="text/javascript">//src="http://localhost/xcms/js/newDepartment.js" 
             var c=0;
             function hide()
             {
 
-                if(document.create.type.value == "0")
+                if(document.createDept.type.value == "0")
                 {
                     document.getElementById("years").style.display="none";
                     document.getElementById("yearsPrompt").style.display="none";
@@ -101,7 +104,7 @@
                 }
                 if(count==0)
                 {
-                    document.forms[0].submit();
+                    document.createDept.submit();
                 }
                 else
                 {
@@ -157,37 +160,106 @@
             }
         </script>
     </head>
-    <body>
+    <body class="has-navbar">
+        
+        <!-- navbar -->
+         <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    
+                    <?php
+                        echo "<a class='brand' href='".site_url()."'>".$this->session->userdata('FirstName')." ".$this->session->userdata('LastName')."</a>\n";
+                    ?>
+                    <ul class="nav">
+                        
+                        <li class="">
+                            
+                        </li>
+                        <li class="">
+                           
+                        </li>
+                        <li class="">
+                           
+                        </li>
+                    </ul>
+                    
+                    <form class="navbar-search pull-left" action="<?php echo site_url();?>main/search">
+                        <input type="text" class=" span2" placeholder="Search" name="search">
+                    </form>
+                    
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="<?php echo site_url();?>">
+                                <i class="icon-home" style="font-size: 30px;"></i>
+                            </a>
+                        </li>
+                        <li class="divider-vertical">
+                        </li>
+                        <li class="dropdown" id="options">
+                            <a href="#options" class="dropdown-toggle" data-toggle="dropdown">
+                                Account
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo site_url().'accounts/changePassword';?>">Change Password</a>                    
+                                </li>
+                                <li>
+                                    <a href="<?php echo site_url().'accounts/logout';?>">Logout</a> 
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+        
         <div class="container">
+            <div class="row page-header">
+                <div class="span12" align="right">
+                    <img src="http://localhost/xcms/images/department.gif" />
+                </div>
+            </div>
+            <div class="row alert alert-info">
             <?php
+            
                 echo $err;
             ?>
-            <form class="well" name="create" method="POST" action="http://localhost/xcms/admin/createDepartment" id="form1">
-                <table id="myTable">
-                    <tr><td>Department Name:</td><td><input type="text" name="dname" id="dname"/></td></tr>
-                    <tr><td>Department Code:</td><td><input type="text" name="dcode" /></td></tr>
-                    <tr><td>Admin Username: </td><td> <input type="text" name="Email" /></td></tr>   
-                    <tr><td> Password: </td><td> <input type="password" name="Password1" /></td></tr>
-                    <tr><td> Confirm Password: </td><td> <input type="password" name="Password" /></td></tr>
-                    <tr><td>Type:</td>
-                        <td><select name="type" onChange="hide();" >
-                                <option value="-1">Select Department Type</option>
-                                <option value="1">Academic</option>
-                                <option value="0">Non-Academic</option>
-                        </select></td></tr>
+            </div>
+            <div class="row well">
+                <form name="createDept" name="create" method="POST" action="http://localhost/xcms/admin/createDepartment" id="form1">
+                    <table id="myTable">
+                        <tr><td>Department Name:</td><td><input type="text" name="dname" id="dname"/></td></tr>
+                        <tr><td>Department Code:</td><td><input type="text" name="dcode" /></td></tr>
+                        <tr><td>Admin Username: </td><td> <input type="text" name="Email" /></td></tr>   
+                        <tr><td> Password: </td><td> <input type="password" name="Password1" /></td></tr>
+                        <tr><td> Confirm Password: </td><td> <input type="password" name="Password" /></td></tr>
+                        <tr><td>Type:</td>
+                            <td><select name="type" onChange="hide();" >
+                                    <option value="-1">Select Department Type</option>
+                                    <option value="1">Academic</option>
+                                    <option value="0">Non-Academic</option>
+                            </select></td></tr>
 
-                    <tr>
-                        <td id="yearsPrompt">Number of Years:</td>
-                        <td ><input type="text" name="year" id="years" onChange="newDeptYear();"/></td>
-                    </tr>
+                        <tr>
+                            <td id="yearsPrompt">Number of Years:</td>
+                            <td ><input type="text" name="year" id="years" onChange="newDeptYear();"/></td>
+                        </tr>
 
 
-                </table>
-                <input type="button" onClick="validate();" value="Create"/>
-                <br/>
-                <a href="http://localhost/xcms/main">Click to cancel</a>
-            </form>
+                    </table>
+                    <input class="btn btn-success btn-large offset1" type="button" onClick="validate();" value="Create"/>
+                    <br/>
+                    <a class="btn btn-warning" href="http://localhost/xcms/main">Cancel</a>
+                </form>
+            </div>
+            
         </div>
+        <script src="http://localhost/xcms/js/jquery.js"></script>
+        <script src="http://localhost/xcms/js/bootstrap.min.js"></script>
     </body>
     
 </html>

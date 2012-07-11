@@ -38,7 +38,10 @@ class Blocks extends CI_Controller{
             {
                 $this->block->createBlock($Department, $Year, $Room);
                 header("Refresh:2; URL=http://localhost/xcms/main");
-                echo "Block created";
+                $d = array ( 'message' => "Block created",
+                                'image' => "blocks.gif");
+                $this->load->view('displayPrompt_view', $d);
+//                echo "Block created";
             }
                 else
             {
@@ -163,17 +166,21 @@ class Blocks extends CI_Controller{
     }
     public function freeze($blockID, $blockSetID)
     {
-
+        
         $this->load->model('block');
         if($this->block->freeze($blockSetID))
         {
-            echo "Set ".$blockID."/".$blockSetID." has been frozen<br />";
-            echo '<a href="http://localhost/xcms/blocks/generateSet">Click to request new set</a>';
+            $d = array ( 'message' => "Set ".$blockID."/".$blockSetID." has been frozen<br />".'<a href="http://localhost/xcms/blocks/generateSet">Click to request new set</a>',
+                                'image' => "codes.gif");
+                        $this->load->view('displayPrompt_view', $d);
+//            echo "Set ".$blockID."/".$blockSetID." has been frozen<br />".'<a href="http://localhost/xcms/blocks/generateSet">Click to request new set</a>';
 
         }
         else
         {
-            echo "An error occured. Please try again.";
+            $d = array ( 'message' => "An error occured. Please try again.");
+            $this->load->view('displayPrompt_view', $d);
+//            echo "An error occured. Please try again.";
 
             redirect(site_url().'blocks/generateSet', 'location');
         }

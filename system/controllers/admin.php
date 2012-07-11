@@ -96,7 +96,9 @@ class Admin extends CI_Controller {
                 if(!$err && $POSTED['dname'])
                 {
                     header("Refresh:2; URL=http://localhost/xcms/");
-                    echo "Department created";
+                    $d = array ( 'message' => "Department created",
+                                'image' => "department.gif");
+                    $this->load->view('displayPrompt_view', $d);
                 }
             }
             else
@@ -106,7 +108,8 @@ class Admin extends CI_Controller {
         }
         public function createCR()
         {
-            redirect(base_url().'accounts/register/cr', 'location');
+            $data['choice'] = 1;
+            $this->load->view('CRcreate_view', $data);
             return;
         }
         public function deleteDepartment()
@@ -135,7 +138,10 @@ class Admin extends CI_Controller {
                     {
                         $this->block->removeDepartment($dcode);
                         header("Refresh:2; URL=http://localhost/xcms/");
-                        echo "Department deleted";
+                        $d = array ( 'message' => "Department deleted",
+                                'image' => "department.gif");
+                        $this->load->view('displayPrompt_view', $d);
+                        //echo "Department deleted";
                         
                     }
                     else

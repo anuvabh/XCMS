@@ -1,9 +1,29 @@
 @import url('bootstrap.css');
+@import url('font-awesome.css');
+/*@import url('http://fonts.googleapis.com/css?family=Coming+Soon');*/
 /*@import url('bootstrap-responsive.css');*/
 body
 {	
-    background: url('http://localhost/xcms/images/backsliced.jpg');
+/*    background: url('http://localhost/xcms/images/backsliced.jpg');
     background-repeat: repeat-x;
+    background-attachment:fixed;
+    background-size: 100% 100%;
+    font-family: 'Coming Soon', cursive;*/
+/*    background-color: #f4f4f4;*/
+/*    #fcfff1;*/
+}
+a
+{
+    color: #000000;
+}
+a:hover
+{
+    color: #555555;
+    text-decoration: none;
+}
+.has-navbar
+{
+    padding-top: 50px;
 }
 .shadow
 {
@@ -12,8 +32,10 @@ body
 .well
 {
     /*background-color: #c8e1ec;*/
-    /*background-color: #d1e9ed
+    /*background-color: #d1e9ed*/
     /*background-color: #d5f3f8;*/
+    background-color: #ebf4f8;
+/*    #deeff6;*/
 }
 .center
 {
@@ -23,21 +45,63 @@ body
 {
     border: 1px solid black;
 }
+.icon-large
+{
+    font-size: 40px;
+}
+.link-group
+{
+    margin-top: 20px;
+}
+.icon-container
+{
+    height: 75px;
+    margin-top: 20px;
+}
+
+.navbar, .navbar-inner
+{
+    color: white;
+    background-color: #012c40;
+/*    *background-color: #99cccc;*/
+    background-image: -ms-linear-gradient(top, #33667e, #012c40);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#33667e), to(#012c40));
+    background-image: -webkit-linear-gradient(top, #33667e, #012c40);
+    background-image: -o-linear-gradient(top, #33667e, #012c40);
+    background-image: linear-gradient(top, #33667e, #012c40);
+    background-image: -moz-linear-gradient(top, #33667e, #012c40);
+    background-repeat: repeat-x;
+    border-color: #222222 #222222 #000000;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#33667e', endColorstr='#012c40', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
+}
+.navbar .brand
+{
+    color: white;
+}
+
 #heading
 {
 
 }
+
 #login
 {
     padding: 15px;
     border-radius: 15px;
     background: #348fb9;
 }
+
 #login-box
 {
     width: 400px;
     left: 54%;
 }
+
 #carousel-div
 {
     padding: 10px;

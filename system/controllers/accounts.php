@@ -65,8 +65,15 @@ class Accounts extends CI_Controller
   
     
     /*--- register ---*/
-    public function register($type = 'student')
+    public function register($type = 'student', $modify=0)
     {
+        if(strlen($this->input->post('modify')>0))
+            $modify = intval ($this->input->post('modify'));
+        if($modify!=0 && $modify!=1 && $modify!=3)
+        {
+            show_404('page');
+        }
+        
         $UserType = $this->session->userdata('UserType'); 
         
         //someone is already logged in and it is not the system admin...
@@ -86,8 +93,7 @@ class Accounts extends CI_Controller
         $errorMessage = "";
         
         $Code = "";
-        /*echo ".....".isset($Uspe);
-        if(isset($UserType))*/
+      
             $Code = $this->input->post('Code');
         
         if($UserType == 'system')
@@ -103,10 +109,16 @@ class Accounts extends CI_Controller
         $Password1 = $this->input->post('Password1');
         $Password = $this->input->post('Password');
         
-        $length = strlen($Code)*strlen($Room)*strlen($FirstName)*strlen($LastName)*strlen($Roll)*strlen($Email)*strlen($Password1)*strlen($Password);
+        if($modify == 0 )
+            $length = strlen($Code)*strlen($Room)*strlen($FirstName)*strlen($LastName)*strlen($Roll)*strlen($Email)*strlen($Password1)*strlen($Password);
+        else
+            $length = strlen($Room)*strlen($Email);
+            
+//        if($modify!=0 && $length==0)
         
         if($length != 0)
         {//all fields have been filled, hence we proceed...   
+            
             $error = 0;
             $this->load->helper('email');
             $blockID;
@@ -118,13 +130,105 @@ class Accounts extends CI_Controller
                 {
                     $error = 1;
                     $errorMessage = "Please check your data<br />";
+                    
                 }
                 else
                 {
-                    if($this->block->blockHasCR($blockID) != 0)
+                    if($modify==0 && $this->block->blockHasCR($blockID) != 0)
                     {
                         $error = 1;
                         $errorMessage = "CR already assigned to the block<br />";
+                    }
+                    if($modify!=0)
+                    {
+                        
+                        
+                            
+                        $existing = $this->user->hasCR($Department, $Year, $Room);
+                        $isCR = $this->user->isCR($Email);
+
+                        if ($Department != $this->user->userDept($Email))
+                        {
+                            $data['errorMessage'] = 'To make a student a CR, he/she has to belng to that department';
+                            $data['modify'] = 1;
+
+                            $this->load->view('register_view', $data);
+                            return;
+                        }
+                        if(count($existing) == 0 && !$isCR)
+                        {
+                            
+                                $this->user->makeCR($Department, $Year, $Room, $Email);
+
+                                header("Refresh:2; URL=http://localhost/xcms/");
+                                $d = array ( 'message' => "CR created",
+                                    'image' => "student.gif");
+                                $this->load->view('displayPrompt_view', $d);
+                                return;
+                        }
+                        else 
+                        {
+                            if($isCR)
+                            {
+                                
+                                if(count($existing) > 0)
+                                {
+
+                                    if($modify==3)
+                                    {
+                                        $this->user->revokeCR($this->input->post('CRID'));
+                                        $this->user->makeCR($Department, $Year, $Room, $Email);
+                                        header("Refresh:2; URL=http://localhost/xcms/");
+                                        $d = array ( 'message' => "CR changed",
+                                            'image' => "student.gif");
+                                        $this->load->view('displayPrompt_view', $d);
+                                        return;
+                                    }
+
+                                    else
+                                    {
+                                        $x['CR'] = $existing[0];
+
+                                        $x['Department'] = $Department;
+                                        $x['Year'] = $Year;
+                                        $x['Room'] = $Room;
+                                        $x["Email"] = $Email;
+                                        $this->load->view('CRcreate_view', $x);
+                                    }
+                                    $this->user->modifyCR($Department, $Year, $Room, $Email);
+                                
+
+                                }
+                                return;
+                            }
+                            else if(count($existing) > 0)
+                            {
+                                if($modify==3)
+                                {
+//                                    print_r($existing[0]);
+                                    $this->user->revokeCR($existing[0]['UserID']);
+                                    $this->user->makeCR($Department, $Year, $Room, $Email);
+                                    header("Refresh:2; URL=http://localhost/xcms/");
+                                    $d = array ( 'message' => "CR changed",
+                                        'image' => "student.gif");
+                                    $this->load->view('displayPrompt_view', $d);
+                                }
+                                
+                                else
+                                {
+                                    $x['CR'] = $existing[0];
+                                    $x['Department'] = $Department;
+                                    $x['Year'] = $Year;
+                                    $x['Room'] = $Room;
+                                    $x["Email"] = $Email;
+                                    $this->load->view('CRcreate_view', $x);
+                                }
+                                
+                            }
+                            return;
+                        }
+                        
+                        
                     }
                 }
             }
@@ -149,30 +253,34 @@ class Accounts extends CI_Controller
                     $errorMessage = "Room number is invalid<br />";
                 }                
             }
+            if($UserType != 'system' || $type != 'cr')
+            {
+                if($Password != $Password1)
+                {
+                $error = 2;
+                $errorMessage = "Passwords should match<br />";
+                }
+                if(!is_numeric($Roll) || $Roll <=0 )
+                {
+                    $error = $error*10 + 3;
+                    $errorMessage = $errorMessage."Roll should be an integer<br />";
+                }
+                if(!valid_email($Email))
+                {
+                    $error = $error*10 + 4;
+                    $errorMessage = $errorMessage."Email id should be valid<br />";
+                }
+
+                if ($this->user->fetchUserID($Email) != 0 && $type!='cr')
+                {
+                $error = $error*10 + 5;
+                $errorMessage = $errorMessage."Choose different email id<br />";
+                }
             
-            if($Password != $Password1)
-            {
-               $error = 2;
-               $errorMessage = "Passwords should match<br />";
-            }
-            if(!is_numeric($Roll) || $Roll <=0 )
-            {
-                $error = $error*10 + 3;
-                $errorMessage = $errorMessage."Roll should be an integer<br />";
-            }
-            if(!valid_email($Email))
-            {
-                $error = $error*10 + 4;
-                $errorMessage = $errorMessage."Email id should be valid<br />";
-            }
-            
-            if ($this->user->fetchUserID($Email) != 0)
-            {
-               $error = $error*10 + 5;
-               $errorMessage = $errorMessage."Choose different email id<br />";
             }
             if($error == 0)
             {
+                
                 $info = array( 
                         'FirstName' => $FirstName,
                         'LastName' => $LastName,
@@ -190,19 +298,22 @@ class Accounts extends CI_Controller
                     $this->block->assignCRBlock($result->UserID, $blockID);
                     
                     header("Refresh:2; URL=http://localhost/xcms/");
-                    echo "CR created";
+                    $d = array ( 'message' => "CR created",
+                                'image' => "student.gif");
+                    $this->load->view('displayPrompt_view', $d);
+                    //echo "CR created";
                     
                 }
                 else
                 {
                     $data = array(
-                        'UserID' => $result->UserID,
-                        'UserType' => $result->UserType,//might need to use escape and change wherever needed
-                        'FirstName' => $FirstName,
-                        'LastName' => $LastName,
-                        'Department' => $Department,
-                        'Roll' => $Roll
-                        );
+                            'UserID' => $result->UserID,
+                            'UserType' => $result->UserType,//might need to use escape and change wherever needed
+                            'FirstName' => $FirstName,
+                            'LastName' => $LastName,
+                            'Department' => $Department,
+                            'Roll' => $Roll
+                            );
                     $this->session->set_userdata($data);
                     redirect(site_url(), 'location');
                 }
@@ -210,7 +321,9 @@ class Accounts extends CI_Controller
             }
             else
             {
+//                echo "1";
                 $data['errorMessage'] = $errorMessage;//title to be sent
+                $data['modify'] = $modify;
                 //depending on system or student, CR Creation or New Student Register
                 $this->load->view('register_view', $data);
             }
@@ -218,11 +331,14 @@ class Accounts extends CI_Controller
         }    
         else
         {
+            
             $data['errorMessage'] = 'Please Fill All Fields';
+            $data['modify'] = $modify;
             $this->load->view('register_view', $data);
         }
     }
     //end of register() 
+    
     function changePassword()
     {
         if(!$this->session->userdata('UserID'))
@@ -243,19 +359,20 @@ class Accounts extends CI_Controller
             $this->load->model('user');
             if($this->user->changePassword($this->session->userdata('UserID'), $oldPass, $newPass))
             {
-                echo "Password Changed";
                 header("Refresh:2; URL=http://localhost/xcms/");
+                $d = array ( 'message' => "Password changed");
+                $this->load->view('displayPrompt_view', $d);
+                //echo "Password Changed";
                 //redirect(site_url().'main', 'refresh:5');
             }
             else
             {
                 $data['Err'] = "Please enter correct Password";
-                $this->load->view('changePassword', $data);
+                $this->load->view('changePassword_view', $data);
             }
         }
         else
-        $this->load->view('changePassword', $data);
-        
+            $this->load->view('changePassword_view', $data);    
     }
     
     
@@ -273,7 +390,23 @@ class Accounts extends CI_Controller
         $this->load->view('allUsers_view',$t);
     }
     public function edit(){}
-    public function view(){}
+    public function view($UID)
+    {
+        if(!$this->session->userdata('UserID'))
+        {
+            redirect(site_url().'main', 'location');
+            return;
+        }
+        $this->load->model('user');
+        $data['user'] = $this->user->userDetails($UID);
+        if($data['user'])
+            $this->load->view('profile_view', $data);
+        else
+            $this->load->view('404_view', $data);
+//        print_r($data);
+        
+        
+    }
 }
 /* End of file accounts.php */
 /* Location: ./system/controllers/accounts.php */    
